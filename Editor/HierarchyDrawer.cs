@@ -621,7 +621,7 @@ namespace Febucci.HierarchyData
             
             //EditorOnly objects are only removed from build if they're not childrens
             if (data.separator.enabled && data.separator.color.a >0
-                                       && currentItem.isSeparator && currentItem.nestingLevel == 0)
+                                       && currentItem.isSeparator && currentItem.nestingLevel <= 1)
             {
                 //Adds color on top of the label
                 EditorGUI.DrawRect(selectionRect, data.separator.color);
